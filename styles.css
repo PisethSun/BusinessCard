@@ -1,0 +1,108 @@
+body {
+    margin: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Avatar Image */
+.avatar {
+    width: 150px;
+    border-radius: 10px;
+}
+
+/* Business Card */
+.card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background: #d80032;
+    color: #03071e;
+    border-bottom-width: 6px;
+    border-radius: 10px;
+    box-shadow: 5px 10px #3f37c9;
+}
+
+/* Optional Debug Border */
+.border-blue {
+    border: 1px dotted blue;
+}
+
+/* Image Styling */
+img {
+    --s: 150px;   /* image size */
+    --b: 5px;     /* border thickness */
+    --g: 5px;     /* gap */
+    --c: #072ac8; /* hover color */
+  
+    width: var(--s);
+    aspect-ratio: 1;
+    outline: calc(var(--s) / 2) solid #0009;
+    outline-offset: calc(var(--s) / -2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+img:hover {
+    outline: var(--b) solid var(--c);
+    outline-offset: var(--g);
+}
+
+img + img {
+    border-radius: 50%;
+}
+
+/* Typing Animation */
+@keyframes typing {
+    0%   { content: ""; }
+    10%  { content: "P"; }
+    20%  { content: "Pi"; }
+    30%  { content: "Pis"; }
+    40%  { content: "Pise"; }
+    50%  { content: "Piset"; }
+    60%  { content: "Piseth"; }
+    70%  { content: "Piseth "; }
+    80%  { content: "Piseth S"; }
+    90%  { content: "Piseth Su"; }
+    100% { content: "Piseth Sun"; }
+}
+
+@keyframes typing {
+  0% { content: ""; }
+  10% { content: "P"; }
+  20% { content: "Pi"; }
+  30% { content: "Pis"; }
+  40% { content: "Pise"; }
+  50% { content: "Piset"; }
+  60% { content: "Piseth"; }
+  70% { content: "Piseth "; }
+  80% { content: "Piseth S"; }
+  90% { content: "Piseth Su"; }
+  100% { content: "Piseth Sun"; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter {
+  --caret: currentcolor;
+  font-size: 2rem;
+  color: #000814;
+  display: inline-block;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 5s steps(10, end) forwards,
+             typing 5s steps(10, end) 10s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 5s linear infinite;
+}
+
